@@ -15,9 +15,7 @@ export function* watchEcommerceSKUListActions() {
 
 export function* ecommerceSKUListRequest() {
   try {
-    console.log('calling ecommerceSKUListRequest');
     const response = yield call(ecommerceSKUsAPI);
-    console.log('response ', response);
     yield put(createEcommerceRequestSuccess(response));
   } catch (error) {
     console.log('ERROR    ', error);
@@ -27,9 +25,7 @@ export function* ecommerceSKUListRequest() {
 
 export function* ecommerceCheckoutRequest(listOfProducts) {
   try {
-    console.log('calling ecommerceCheckoutRequest');
     const response = yield call(ecommerceCheckoutAPI, listOfProducts);
-    console.log('response ', response);
     yield put(checkoutRequestSuccess(response));
   } catch (error) {
     console.log('ERROR    ', error);

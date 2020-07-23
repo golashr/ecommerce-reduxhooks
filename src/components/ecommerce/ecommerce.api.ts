@@ -31,7 +31,6 @@ export const ecommerceCheckoutAPI = async listOfProducts => {
       data: listOfProducts.payload,
     });
     const { data } = await res;
-    console.log('data ', data.data);
     return data.data;
   } catch (error) {
     console.log('ERROR    ', error);
